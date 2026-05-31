@@ -1,4 +1,4 @@
-# Vault — the money agent that never sends your data to the cloud
+# Vault - the money agent that never sends your data to the cloud
 
 > **Vault reads your bank statement, your inbox receipts, and your app usage — finds the money quietly leaking out of your life — and does it 100% on your machine, because Coral runs locally.**
 
