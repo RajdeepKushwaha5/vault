@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import {
-  AlertTriangle, ArrowUpRight, Ban, Clock, Copy, Layers, Repeat, CalendarClock, Mail, X, Search,
+  AlertTriangle, ArrowUpRight, Ban, Clock, Copy, Layers, Repeat, CalendarClock, Mail, X, Search, ChevronDown, Code2,
 } from 'lucide-react'
 import { draftCancel, type Leak } from '../api'
+import { CoralProofPanel, type CoralProof } from './CoralProof'
 
 const TYPE_META: Record<string, { label: string; icon: any; color: string }> = {
   forgotten:  { label: 'Forgotten',     icon: Ban,          color: 'text-red-600 bg-red-50 border-red-200' },
@@ -47,37 +48,69 @@ function CancelModal({ leak, onClose }: { leak: Leak; onClose: () => void }) {
   )
 }
 
-export function LeaksFeed({ leaks }: { leaks: Leak[] }) {
+export function LeaksFeed({ leaks, proofsByType }: { leaks: Leak[]; proofsByType?: Record<string, CoralProof> }) {
   const [cancelTarget, setCancelTarget] = useState<Leak | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
         <Repeat className="h-4 w-4" /> Leaks found — ranked by yearly impact
       </div>
+      <p className="-mt-1 text-xs text-slate-400">Click any card to see the exact Coral SQL that found it.</p>
       {leaks.map((leak, i) => {
         const meta = TYPE_META[leak.type] ?? TYPE_META.forgotten
         const Icon = meta.icon
+        const open = openIndex === i
+        const proof = proofsByType?.[leak.type]
         return (
-          <div key={i} className="glass flex items-center gap-4 rounded-2xl p-4">
-            <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border ${meta.color}`}>
-              <Icon className="h-5 w-5" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <div className="flex items-center gap-2">
-                <span className="truncate font-semibold text-[#11180f]">{leak.title}</span>
-                <span className={`rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase ${meta.color}`}>{meta.label}</span>
+          <div key={i} className="glass overflow-hidden rounded-2xl">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4">
+              <div
+                role="button"
+                tabIndex={0}
+                onClick={() => setOpenIndex(open ? null : i)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpenIndex(open ? null : i) } }}
+                className="flex flex-1 cursor-pointer items-start sm:items-center gap-4 text-left min-w-0"
+              >
+                <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border ${meta.color} mt-0.5 sm:mt-0`}>
+                  <Icon className="h-5 w-5" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="truncate font-semibold text-[#11180f]">{leak.title}</span>
+                    <span className={`rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase ${meta.color}`}>{meta.label}</span>
+                  </div>
+                  <p className="truncate text-sm text-slate-500 mt-1 sm:mt-0">{leak.detail}</p>
+                </div>
+                <div className="shrink-0 text-right">
+                  <div className="text-lg font-bold text-red-600">${leak.annual_impact.toLocaleString(undefined, { maximumFractionDigits: 0 })}<span className="text-xs font-medium text-slate-400">/yr</span></div>
+                  <div className="text-xs text-slate-400">${leak.monthly.toFixed(2)}/mo</div>
+                </div>
               </div>
-              <p className="truncate text-sm text-slate-500">{leak.detail}</p>
+              <div className="flex items-center justify-end gap-2 shrink-0 w-full sm:w-auto border-t border-slate-100/50 pt-3 sm:border-0 sm:pt-0">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(open ? null : i)}
+                  className="cursor-pointer shrink-0 rounded-lg border border-slate-200 bg-white px-2.5 py-2 text-xs font-medium text-slate-500 hover:bg-slate-50 transition-colors">
+                  <Code2 className="mb-0.5 mr-1 inline h-3.5 w-3.5" />SQL
+                  <ChevronDown className={`ml-1 inline h-3.5 w-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setCancelTarget(leak)}
+                  className="flex-1 sm:flex-none shrink-0 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100 transition-colors text-center">
+                  Draft cancel
+                </button>
+              </div>
             </div>
-            <div className="shrink-0 text-right">
-              <div className="text-lg font-bold text-red-600">${leak.annual_impact.toLocaleString(undefined, { maximumFractionDigits: 0 })}<span className="text-xs font-medium text-slate-400">/yr</span></div>
-              <div className="text-xs text-slate-400">${leak.monthly.toFixed(2)}/mo</div>
-            </div>
-            <button onClick={() => setCancelTarget(leak)}
-                    className="shrink-0 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100">
-              Draft cancel
-            </button>
+            {open && (
+              <div className="border-t border-slate-100 bg-slate-50/60 p-4">
+                {proof
+                  ? <CoralProofPanel proofs={[proof]} title={`Coral SQL — ${meta.label}`} />
+                  : <p className="text-sm text-slate-400">No query proof available for this card.</p>}
+              </div>
+            )}
           </div>
         )
       })}

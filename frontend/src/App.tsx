@@ -61,7 +61,7 @@ export default function App() {
 
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
             <div className="lg:col-span-3">
-              <LeaksFeed leaks={leaks} />
+              <LeaksFeed leaks={leaks} proofsByType={data?.proofs_by_type} />
             </div>
             <div className="space-y-6 lg:col-span-2">
               <PrivacyPanel />

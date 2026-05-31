@@ -38,6 +38,16 @@ def build_leaks() -> dict:
     trial = results["trial"]["rows"]
     annual = results["annual"]["rows"]
     proofs = [results[k]["proof"] for k in ("forgotten", "price_hike", "duplicate", "trial", "annual")]
+    # Per-leak-type proof so each card can show the exact query that found it.
+    # "review" (cloud creep) comes from the same price-hike query.
+    proofs_by_type = {
+        "forgotten": results["forgotten"]["proof"],
+        "price_hike": results["price_hike"]["proof"],
+        "review": results["price_hike"]["proof"],
+        "duplicate": results["duplicate"]["proof"],
+        "trial": results["trial"]["proof"],
+        "annual": results["annual"]["proof"],
+    }
 
     # Build a single ranked leaks feed with a uniform shape.
     leaks: list[dict] = []
@@ -116,4 +126,4 @@ def build_leaks() -> dict:
         "sources_joined": ["vault.transactions", "vault.receipts", "vault.usage"],
     }
 
-    return {"summary": summary, "leaks": leaks, "proofs": proofs}
+    return {"summary": summary, "leaks": leaks, "proofs": proofs, "proofs_by_type": proofs_by_type}
