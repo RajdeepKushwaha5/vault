@@ -1,0 +1,84 @@
+{"txn_id": "T1062", "date": "2025-06-02", "merchant": "Amazon Prime", "description": "Amazon Prime ANNUAL", "amount": -139.0, "category": "subscription"}
+{"txn_id": "T1077", "date": "2026-01-30", "merchant": "Acme Corp Payroll", "description": "DIRECT DEPOSIT PAYROLL", "amount": 4200.0, "category": "income"}
+{"txn_id": "T1001", "date": "2026-02-01", "merchant": "Netflix", "description": "Netflix", "amount": -15.49, "category": "subscription"}
+{"txn_id": "T1006", "date": "2026-02-01", "merchant": "Spotify", "description": "Spotify Premium", "amount": -11.99, "category": "subscription"}
+{"txn_id": "T1011", "date": "2026-02-01", "merchant": "Apple Music", "description": "Apple Music", "amount": -10.99, "category": "subscription"}
+{"txn_id": "T1016", "date": "2026-02-01", "merchant": "Audible", "description": "Audible", "amount": -14.95, "category": "subscription"}
+{"txn_id": "T1021", "date": "2026-02-01", "merchant": "Peloton", "description": "Peloton App", "amount": -44.0, "category": "subscription"}
+{"txn_id": "T1027", "date": "2026-02-01", "merchant": "Notion", "description": "Notion Plus", "amount": -10.0, "category": "subscription"}
+{"txn_id": "T1032", "date": "2026-02-01", "merchant": "Evernote", "description": "Evernote Personal", "amount": -14.99, "category": "subscription"}
+{"txn_id": "T1037", "date": "2026-02-01", "merchant": "OpenAI", "description": "ChatGPT Plus", "amount": -20.0, "category": "subscription"}
+{"txn_id": "T1042", "date": "2026-02-01", "merchant": "AWS", "description": "Amazon Web Services", "amount": -12.4, "category": "subscription"}
+{"txn_id": "T1047", "date": "2026-02-01", "merchant": "iCloud", "description": "iCloud+ 200GB", "amount": -2.99, "category": "subscription"}
+{"txn_id": "T1052", "date": "2026-02-01", "merchant": "Disney Plus", "description": "Disney+", "amount": -13.99, "category": "subscription"}
+{"txn_id": "T1057", "date": "2026-02-01", "merchant": "NYTimes", "description": "NYT Digital", "amount": -17.0, "category": "subscription"}
+{"txn_id": "T1078", "date": "2026-02-01", "merchant": "Skyline Apartments", "description": "RENT", "amount": -1850.0, "category": "housing"}
+{"txn_id": "T1063", "date": "2026-02-09", "merchant": "Whole Foods Market", "description": "Whole Foods Market", "amount": -92.4, "category": "groceries"}
+{"txn_id": "T1064", "date": "2026-02-16", "merchant": "Trader Joe's", "description": "Trader Joe's", "amount": -47.1, "category": "groceries"}
+{"txn_id": "T1065", "date": "2026-02-23", "merchant": "Shell", "description": "Shell", "amount": -58.3, "category": "gas"}
+{"txn_id": "T1079", "date": "2026-03-01", "merchant": "Acme Corp Payroll", "description": "DIRECT DEPOSIT PAYROLL", "amount": 4200.0, "category": "income"}
+{"txn_id": "T1066", "date": "2026-03-02", "merchant": "Chipotle", "description": "Chipotle", "amount": -14.85, "category": "dining"}
+{"txn_id": "T1002", "date": "2026-03-03", "merchant": "Netflix", "description": "Netflix", "amount": -15.49, "category": "subscription"}
+{"txn_id": "T1007", "date": "2026-03-03", "merchant": "Spotify", "description": "Spotify Premium", "amount": -11.99, "category": "subscription"}
+{"txn_id": "T1012", "date": "2026-03-03", "merchant": "Apple Music", "description": "Apple Music", "amount": -10.99, "category": "subscription"}
+{"txn_id": "T1017", "date": "2026-03-03", "merchant": "Audible", "description": "Audible", "amount": -14.95, "category": "subscription"}
+{"txn_id": "T1022", "date": "2026-03-03", "merchant": "Peloton", "description": "Peloton App", "amount": -44.0, "category": "subscription"}
+{"txn_id": "T1028", "date": "2026-03-03", "merchant": "Notion", "description": "Notion Plus", "amount": -10.0, "category": "subscription"}
+{"txn_id": "T1033", "date": "2026-03-03", "merchant": "Evernote", "description": "Evernote Personal", "amount": -14.99, "category": "subscription"}
+{"txn_id": "T1038", "date": "2026-03-03", "merchant": "OpenAI", "description": "ChatGPT Plus", "amount": -20.0, "category": "subscription"}
+{"txn_id": "T1043", "date": "2026-03-03", "merchant": "AWS", "description": "Amazon Web Services", "amount": -31.8, "category": "subscription"}
+{"txn_id": "T1048", "date": "2026-03-03", "merchant": "iCloud", "description": "iCloud+ 200GB", "amount": -2.99, "category": "subscription"}
+{"txn_id": "T1053", "date": "2026-03-03", "merchant": "Disney Plus", "description": "Disney+", "amount": -13.99, "category": "subscription"}
+{"txn_id": "T1058", "date": "2026-03-03", "merchant": "NYTimes", "description": "NYT Digital", "amount": -17.0, "category": "subscription"}
+{"txn_id": "T1080", "date": "2026-03-03", "merchant": "Skyline Apartments", "description": "RENT", "amount": -1850.0, "category": "housing"}
+{"txn_id": "T1067", "date": "2026-03-09", "merchant": "Starbucks", "description": "Starbucks", "amount": -6.75, "category": "dining"}
+{"txn_id": "T1068", "date": "2026-03-16", "merchant": "Uber", "description": "Uber", "amount": -23.4, "category": "transport"}
+{"txn_id": "T1069", "date": "2026-03-23", "merchant": "Amazon", "description": "Amazon", "amount": -64.2, "category": "shopping"}
+{"txn_id": "T1070", "date": "2026-03-30", "merchant": "CVS Pharmacy", "description": "CVS Pharmacy", "amount": -18.9, "category": "health"}
+{"txn_id": "T1081", "date": "2026-03-31", "merchant": "Acme Corp Payroll", "description": "DIRECT DEPOSIT PAYROLL", "amount": 4200.0, "category": "income"}
+{"txn_id": "T1003", "date": "2026-04-02", "merchant": "Netflix", "description": "Netflix", "amount": -15.49, "category": "subscription"}
+{"txn_id": "T1008", "date": "2026-04-02", "merchant": "Spotify", "description": "Spotify Premium", "amount": -11.99, "category": "subscription"}
+{"txn_id": "T1013", "date": "2026-04-02", "merchant": "Apple Music", "description": "Apple Music", "amount": -10.99, "category": "subscription"}
+{"txn_id": "T1018", "date": "2026-04-02", "merchant": "Audible", "description": "Audible", "amount": -14.95, "category": "subscription"}
+{"txn_id": "T1023", "date": "2026-04-02", "merchant": "Peloton", "description": "Peloton App", "amount": -44.0, "category": "subscription"}
+{"txn_id": "T1029", "date": "2026-04-02", "merchant": "Notion", "description": "Notion Plus", "amount": -10.0, "category": "subscription"}
+{"txn_id": "T1034", "date": "2026-04-02", "merchant": "Evernote", "description": "Evernote Personal", "amount": -14.99, "category": "subscription"}
+{"txn_id": "T1039", "date": "2026-04-02", "merchant": "OpenAI", "description": "ChatGPT Plus", "amount": -20.0, "category": "subscription"}
+{"txn_id": "T1044", "date": "2026-04-02", "merchant": "AWS", "description": "Amazon Web Services", "amount": -58.2, "category": "subscription"}
+{"txn_id": "T1049", "date": "2026-04-02", "merchant": "iCloud", "description": "iCloud+ 200GB", "amount": -2.99, "category": "subscription"}
+{"txn_id": "T1054", "date": "2026-04-02", "merchant": "Disney Plus", "description": "Disney+", "amount": -13.99, "category": "subscription"}
+{"txn_id": "T1059", "date": "2026-04-02", "merchant": "NYTimes", "description": "NYT Digital", "amount": -17.0, "category": "subscription"}
+{"txn_id": "T1082", "date": "2026-04-02", "merchant": "Skyline Apartments", "description": "RENT", "amount": -1850.0, "category": "housing"}
+{"txn_id": "T1071", "date": "2026-04-06", "merchant": "Trader Joe's", "description": "Trader Joe's", "amount": -51.66, "category": "groceries"}
+{"txn_id": "T1072", "date": "2026-04-13", "merchant": "Shell", "description": "Shell", "amount": -61.05, "category": "gas"}
+{"txn_id": "T1073", "date": "2026-04-20", "merchant": "Chipotle", "description": "Chipotle", "amount": -16.2, "category": "dining"}
+{"txn_id": "T1074", "date": "2026-04-27", "merchant": "Uber Eats", "description": "Uber Eats", "amount": -31.75, "category": "dining"}
+{"txn_id": "T1083", "date": "2026-04-30", "merchant": "Acme Corp Payroll", "description": "DIRECT DEPOSIT PAYROLL", "amount": 4200.0, "category": "income"}
+{"txn_id": "T1004", "date": "2026-05-02", "merchant": "Netflix", "description": "Netflix", "amount": -17.99, "category": "subscription"}
+{"txn_id": "T1009", "date": "2026-05-02", "merchant": "Spotify", "description": "Spotify Premium", "amount": -11.99, "category": "subscription"}
+{"txn_id": "T1014", "date": "2026-05-02", "merchant": "Apple Music", "description": "Apple Music", "amount": -10.99, "category": "subscription"}
+{"txn_id": "T1019", "date": "2026-05-02", "merchant": "Audible", "description": "Audible", "amount": -14.95, "category": "subscription"}
+{"txn_id": "T1024", "date": "2026-05-02", "merchant": "Peloton", "description": "Peloton App", "amount": -44.0, "category": "subscription"}
+{"txn_id": "T1030", "date": "2026-05-02", "merchant": "Notion", "description": "Notion Plus", "amount": -10.0, "category": "subscription"}
+{"txn_id": "T1035", "date": "2026-05-02", "merchant": "Evernote", "description": "Evernote Personal", "amount": -14.99, "category": "subscription"}
+{"txn_id": "T1040", "date": "2026-05-02", "merchant": "OpenAI", "description": "ChatGPT Plus", "amount": -20.0, "category": "subscription"}
+{"txn_id": "T1045", "date": "2026-05-02", "merchant": "AWS", "description": "Amazon Web Services", "amount": -71.4, "category": "subscription"}
+{"txn_id": "T1050", "date": "2026-05-02", "merchant": "iCloud", "description": "iCloud+ 200GB", "amount": -2.99, "category": "subscription"}
+{"txn_id": "T1055", "date": "2026-05-02", "merchant": "Disney Plus", "description": "Disney+", "amount": -13.99, "category": "subscription"}
+{"txn_id": "T1060", "date": "2026-05-02", "merchant": "NYTimes", "description": "NYT Digital", "amount": -17.0, "category": "subscription"}
+{"txn_id": "T1084", "date": "2026-05-02", "merchant": "Skyline Apartments", "description": "RENT", "amount": -1850.0, "category": "housing"}
+{"txn_id": "T1075", "date": "2026-05-04", "merchant": "Target", "description": "Target", "amount": -88.4, "category": "shopping"}
+{"txn_id": "T1076", "date": "2026-05-11", "merchant": "Starbucks", "description": "Starbucks", "amount": -5.95, "category": "dining"}
+{"txn_id": "T1026", "date": "2026-05-12", "merchant": "Adobe", "description": "Creative Cloud FREE TRIAL", "amount": 0.0, "category": "subscription"}
+{"txn_id": "T1005", "date": "2026-05-29", "merchant": "Netflix", "description": "Netflix", "amount": -17.99, "category": "subscription"}
+{"txn_id": "T1010", "date": "2026-05-29", "merchant": "Spotify", "description": "Spotify Premium", "amount": -11.99, "category": "subscription"}
+{"txn_id": "T1015", "date": "2026-05-29", "merchant": "Apple Music", "description": "Apple Music", "amount": -10.99, "category": "subscription"}
+{"txn_id": "T1020", "date": "2026-05-29", "merchant": "Audible", "description": "Audible", "amount": -14.95, "category": "subscription"}
+{"txn_id": "T1025", "date": "2026-05-29", "merchant": "Peloton", "description": "Peloton App", "amount": -44.0, "category": "subscription"}
+{"txn_id": "T1031", "date": "2026-05-29", "merchant": "Notion", "description": "Notion Plus", "amount": -10.0, "category": "subscription"}
+{"txn_id": "T1036", "date": "2026-05-29", "merchant": "Evernote", "description": "Evernote Personal", "amount": -14.99, "category": "subscription"}
+{"txn_id": "T1041", "date": "2026-05-29", "merchant": "OpenAI", "description": "ChatGPT Plus", "amount": -20.0, "category": "subscription"}
+{"txn_id": "T1046", "date": "2026-05-29", "merchant": "AWS", "description": "Amazon Web Services", "amount": -83.1, "category": "subscription"}
+{"txn_id": "T1051", "date": "2026-05-29", "merchant": "iCloud", "description": "iCloud+ 200GB", "amount": -2.99, "category": "subscription"}
+{"txn_id": "T1056", "date": "2026-05-29", "merchant": "Disney Plus", "description": "Disney+", "amount": -13.99, "category": "subscription"}
+{"txn_id": "T1061", "date": "2026-05-29", "merchant": "NYTimes", "description": "NYT Digital", "amount": -17.0, "category": "subscription"}

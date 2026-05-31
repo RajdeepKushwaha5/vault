@@ -1,0 +1,14 @@
+{"merchant": "Netflix", "service": "Netflix", "category": "streaming", "list_price": 17.99, "billing_cycle": "monthly", "signup_date": "2024-03-09", "cancel_url": "https://netflix.com/account/cancel"}
+{"merchant": "Spotify", "service": "Spotify Premium", "category": "music", "list_price": 11.99, "billing_cycle": "monthly", "signup_date": "2024-08-28", "cancel_url": "https://spotify.com/account/cancel"}
+{"merchant": "Apple Music", "service": "Apple Music", "category": "music", "list_price": 10.99, "billing_cycle": "monthly", "signup_date": "2025-04-15", "cancel_url": "https://applemusic.com/account/cancel"}
+{"merchant": "Audible", "service": "Audible", "category": "audiobooks", "list_price": 14.95, "billing_cycle": "monthly", "signup_date": "2023-12-12", "cancel_url": "https://audible.com/account/cancel"}
+{"merchant": "Peloton", "service": "Peloton App", "category": "fitness", "list_price": 44.0, "billing_cycle": "monthly", "signup_date": "2025-01-15", "cancel_url": "https://peloton.com/account/cancel"}
+{"merchant": "Adobe", "service": "Creative Cloud", "category": "creative", "list_price": 59.99, "billing_cycle": "monthly", "signup_date": "2026-05-12", "cancel_url": "https://adobe.com/account/cancel"}
+{"merchant": "Notion", "service": "Notion Plus", "category": "notes", "list_price": 10.0, "billing_cycle": "monthly", "signup_date": "2025-08-03", "cancel_url": "https://notion.com/account/cancel"}
+{"merchant": "Evernote", "service": "Evernote Personal", "category": "notes", "list_price": 14.99, "billing_cycle": "monthly", "signup_date": "2024-06-09", "cancel_url": "https://evernote.com/account/cancel"}
+{"merchant": "OpenAI", "service": "ChatGPT Plus", "category": "ai", "list_price": 20.0, "billing_cycle": "monthly", "signup_date": "2025-09-22", "cancel_url": "https://openai.com/account/cancel"}
+{"merchant": "AWS", "service": "Amazon Web Services", "category": "cloud", "list_price": 83.1, "billing_cycle": "monthly", "signup_date": "2025-03-26", "cancel_url": "https://aws.com/account/cancel"}
+{"merchant": "iCloud", "service": "iCloud+ 200GB", "category": "storage", "list_price": 2.99, "billing_cycle": "monthly", "signup_date": "2023-09-23", "cancel_url": "https://icloud.com/account/cancel"}
+{"merchant": "Disney Plus", "service": "Disney+", "category": "streaming", "list_price": 13.99, "billing_cycle": "monthly", "signup_date": "2025-05-05", "cancel_url": "https://disneyplus.com/account/cancel"}
+{"merchant": "NYTimes", "service": "NYT Digital", "category": "news", "list_price": 17.0, "billing_cycle": "monthly", "signup_date": "2024-09-27", "cancel_url": "https://nytimes.com/account/cancel"}
+{"merchant": "Amazon Prime", "service": "Amazon Prime", "category": "shopping", "list_price": 139.0, "billing_cycle": "annual", "signup_date": "2025-06-02", "cancel_url": "https://amazonprime.com/account/cancel"}

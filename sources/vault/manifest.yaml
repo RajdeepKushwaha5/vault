@@ -1,0 +1,86 @@
+name: vault
+version: 0.1.0
+dsl_version: 3
+backend: jsonl
+description: >-
+  Vault personal-finance source. Reads three LOCAL JSONL files as SQL tables —
+  your bank transactions, your inbox subscription receipts, and your app usage —
+  so Coral can join money, sign-ups, and actual usage to find leaking spend.
+  Everything stays on your machine: no upload, no cloud, no third party.
+
+test_queries:
+  - SELECT merchant, amount FROM vault.transactions LIMIT 1
+  - SELECT merchant, service, list_price FROM vault.receipts LIMIT 1
+  - SELECT service, last_used_date FROM vault.usage LIMIT 1
+
+tables:
+  # ── Your money: a bank statement export ─────────────────────────────────────
+  - name: transactions
+    description: Bank transactions exported to a local file. Negative amount = money out.
+    guide: |
+      One row per transaction. amount is negative for spend, positive for income.
+      category includes 'subscription' for recurring charges. Join merchant to
+      vault.receipts.merchant to attach the subscription you signed up for.
+    source:
+      location: file:///mnt/d/coral/vault/data/
+      glob: "transactions.jsonl"
+    columns:
+      - name: txn_id
+        type: Utf8
+      - name: date
+        type: Utf8
+      - name: merchant
+        type: Utf8
+      - name: description
+        type: Utf8
+      - name: amount
+        type: Float64
+      - name: category
+        type: Utf8
+
+  # ── Your sign-ups: receipts pulled from your inbox ──────────────────────────
+  - name: receipts
+    description: Subscription receipts — what you signed up for, when, and the listed price.
+    guide: |
+      One row per known subscription. list_price is the advertised price;
+      compare it to the actual charge in vault.transactions to catch silent
+      price hikes. billing_cycle is 'monthly' or 'annual'. cancel_url is the
+      direct cancellation link for the safe-action draft.
+    source:
+      location: file:///mnt/d/coral/vault/data/
+      glob: "receipts.jsonl"
+    columns:
+      - name: merchant
+        type: Utf8
+      - name: service
+        type: Utf8
+      - name: category
+        type: Utf8
+      - name: list_price
+        type: Float64
+      - name: billing_cycle
+        type: Utf8
+      - name: signup_date
+        type: Utf8
+      - name: cancel_url
+        type: Utf8
+
+  # ── Your usage: when you last actually opened each service ───────────────────
+  - name: usage
+    description: Per-service usage — when you last used it and how often recently.
+    guide: |
+      One row per service. last_used_date and sessions_last_30d reveal whether a
+      paid subscription is actually being used. Join service to
+      vault.receipts.service to flag forgotten / zombie subscriptions.
+    source:
+      location: file:///mnt/d/coral/vault/data/
+      glob: "usage.jsonl"
+    columns:
+      - name: service
+        type: Utf8
+      - name: merchant
+        type: Utf8
+      - name: last_used_date
+        type: Utf8
+      - name: sessions_last_30d
+        type: Int64
